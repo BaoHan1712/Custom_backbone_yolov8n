@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['ken']
+
+roboflow:
+  workspace: shyn-vcwnu
+  project: ken-ys3ip
+  version: 3
+  license: Private
+  url: https://app.roboflow.com/shyn-vcwnu/ken-ys3ip/3

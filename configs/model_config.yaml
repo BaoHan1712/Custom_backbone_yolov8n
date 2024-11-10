@@ -1,0 +1,26 @@
+model:
+  backbone:
+    type: "LightCSPDarknet"
+    depth_multiple: 0.25
+    width_multiple: 0.25
+    
+  neck:
+    type: "LightPAN"
+    in_channels: [64, 128]
+    out_channels: 128
+    
+  head:
+    num_classes: 1
+    anchors: 2
+    
+training:
+  batch_size: 16
+  epochs: 10
+  learning_rate: 0.001
+  min_lr: 0.00001
+  warmup_epochs: 2
+  weight_decay: 0.0005
+  scheduler:
+    type: "OneCycleLR"
+    max_lr: 0.01
+    pct_start: 0.3
